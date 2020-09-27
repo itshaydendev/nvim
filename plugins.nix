@@ -10,7 +10,6 @@ let
 in
 
 {
-  
   "coc-phpls" = buildVimPlugin {
     name = "coc-phpls";
     src = fetchgit {
@@ -20,5 +19,4 @@ in
     };
     dependencies = [ pkgs.vimPlugins.coc-nvim ];
   };
-
 }

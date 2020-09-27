@@ -1,0 +1,9 @@
+build:
+  image: nixos/nix:2.3.6
+  stage: build
+  script:
+  - nix-channel --update
+  - 'nix-build -o nvim-$CI_COMMIT_SHA.tar.gz'
+  artifacts:
+    paths:
+      - 'nvim-$CI_COMMIT_SHA.tar.gz'

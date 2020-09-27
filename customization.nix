@@ -28,6 +28,9 @@ in
       { name = "lightline-vim"; }
       { name = "vim-nix"; }
 
+      # Colorschemes
+      { name = "base16-vim"; }
+
       # CoC plugins
       { name = "coc-css"; }
       { name = "coc-emmet"; }
