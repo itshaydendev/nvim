@@ -6,10 +6,14 @@
 with import <nixpkgs> {};
 
 pkgs.neovim.override {
+  viAlias = true;
   vimAlias = true;
-  withNodeJs = true;
 
-  # needs pkgs.python3 pkgs.fzf pkgs.ripgrep pkgs.universal-ctags
+  withNodeJs = true;
+  withPython = true;
+  withPython3 = true;
+
+#  [ pkgs.python3 pkgs.fzf pkgs.ripgrep pkgs.universal-ctags ]
 
   configure = (import ./customization.nix { pkgs = pkgs; });
 }
